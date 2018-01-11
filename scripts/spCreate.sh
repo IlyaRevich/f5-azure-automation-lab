@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#Student Script#
+
+#This Script Creates an Azure Service Principal for Rbac based on the provided Azure Uswername.
+#If student does not have a USERNAME and Password they should ask the instructor for one. 
+
 #Required Enviroment Variable
 #AZURE_USERNAME=
 #AZURE_PW=

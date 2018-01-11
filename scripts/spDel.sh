@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#This Script deletes all Apps that start with student from the subscription.
+#
+
+
 #Required Enviroment Variable
 #AZURE_USERNAME=
 #AZURE_PW=

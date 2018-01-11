@@ -21,7 +21,8 @@ do
   USER_PRINCIPAL="$DISPLAY_NAME@$AZ_USER_DOMAIN"
   LOGIN=$(az login -u $AZURE_USERNAME -p $AZURE_PW)
   USER_CREDS=$(az ad user create --display-name $DISPLAY_NAME --user-principal-name $USER_PRINCIPAL --password $AZ_USER_PW --force-change-password-next-login false)
-  ROLE=$(az role assignment create --assignee $USER_PRINCIPAL --role $AZ_ROLE)
+  ROLE1=$(az role assignment create --assignee $USER_PRINCIPAL --role contributor)
+  ROLE2=$(az role assignment create --assignee $USER_PRINCIPAL --role "user access administrator")
   echo $USER_CREDS | jq .userPrincipalName -r
 done
 

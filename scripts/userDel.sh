@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #Required Enviroment Variable
 #AZURE_USERNAME=
 #AZURE_PW=
