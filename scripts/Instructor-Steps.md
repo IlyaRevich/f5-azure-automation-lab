@@ -31,7 +31,7 @@
 ```
 >Creating Users:
 >===============
->student1@xxxxxxxxxxxxxx.onmicrosoft.com 
+>student1@xxxxxxxxxxxxxx.onmicrosoft.com  
 >student2@xxxxxxxxxxxxxx.onmicrosoft.com 
 >student3@xxxxxxxxxxxxxx.onmicrosoft.com  
 >student4@xxxxxxxxxxxxxx.onmicrosoft.com  
