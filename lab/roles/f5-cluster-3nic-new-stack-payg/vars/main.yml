@@ -7,7 +7,7 @@ dnsLabel: f5studentX
 location: eastus
 
 #F5 Intance
-adminUsername: 
+adminUsername: f5admin
 adminPassword: 
 #instanceName:
 instanceType: Standard_DS4_v2
