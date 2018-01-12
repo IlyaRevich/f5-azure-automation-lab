@@ -1,0 +1,46 @@
+---
+#VARs for F4 Azure ARM Template
+
+#Azure
+resourceGroup: 
+dnsLabel: 
+locaction: 
+
+#F5 Intance
+#adminUsername:
+adminPassword:
+#dnsLabel:
+#instanceName:
+#instanceType: 
+#imageName: Good | Better | Best
+#bigIpVersion: 13.0.0300 | 12.1.2200 | latest
+
+#BYOL
+#licenseKey1:  
+#licenseKey2: 
+
+
+#PAYG
+#licensedBandwidth: 1G | 200m | 25m
+
+#BIG-IQ        
+#bigIqLicewnseHost: 
+#bigIqLicenseUsername:
+#bigIqLicensePassword:
+#bigIqLicwensePool:
+
+#Network        
+#numberOfExternaslIps:
+#vnetAddressPrefix:
+
+#Cluster        
+#enableNetworkFailover:
+#internalLoadBalancerType:
+#internalLoadBalanceProbePort:
+
+#System                
+#ntpServer:
+#timeZone:
+#restrictedSrvcAddress:
+#tagValues:
+#allowUasgeAnalytics:
