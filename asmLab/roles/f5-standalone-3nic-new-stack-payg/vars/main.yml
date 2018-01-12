@@ -1,14 +1,13 @@
 ---
 #Azure Vars
-resourceGroup: f5demo-student1
-dnsLabel: f5demo
+resourceGroup: student2-rg
+dnsLabel: student2
 locaction: eastus
-vnetAddressPrefix: '10.100' 
 tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"OWNER"}
 
 #BIG-IP Vars
 adminUsername: f5admin
-adminPassword: ChangeMeNow!!!
+adminPassword: ChangeMeNow123
 
 #Instance Details
 imageName: Best
@@ -19,5 +18,5 @@ timeZone: UTC
 
 
 #PAYG Vars
-#licensedBandwidth: 1G
+#licensedBandwidth: 25m
 
