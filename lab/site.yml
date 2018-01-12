@@ -3,8 +3,5 @@
   connection: local
   gather_facts: no
 
-  vars_files:
-    - vars.yml
-
   roles:
     - f5-cluster-3nic-new-stack-payg

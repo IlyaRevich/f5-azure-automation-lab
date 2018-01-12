@@ -2,17 +2,16 @@
 #VARs for F4 Azure ARM Template
 
 #Azure
-resourceGroup:
-dnsLabel:
-locaction:
+resourceGroup: f5-rg-studentX
+dnsLabel: f5studentX
+location: eastus
 
 #F5 Intance
-adminUsername:
-adminPassword:
-#dnsLabel:
+adminUsername: 
+adminPassword: 
 #instanceName:
-#instanceType: 
-#imageName: Good | Better | Best
+instanceType: Standard_DS4_v2
+imageName:  Best
 #bigIpVersion: 13.0.0300 | 12.1.2200 | latest
 
 #BYOL
@@ -21,7 +20,7 @@ adminPassword:
 
 
 #PAYG
-#licensedBandwidth: 1G | 200m | 25m
+licensedBandwidth: 25m 
 
 #BIG-IQ        
 #bigIqLicewnseHost: 
@@ -30,7 +29,7 @@ adminPassword:
 #bigIqLicwensePool:
 
 #Network        
-#numberOfExternaslIps:
+numberOfExternaslIps: 2
 #vnetAddressPrefix:
 
 #Cluster        
