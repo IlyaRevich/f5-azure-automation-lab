@@ -1,0 +1,15 @@
+---
+- name: Create a VM
+  azure_rm_virtualmachine:
+    resource_group: f5demo-rg
+    name: f5demo-linux-vm
+    vm_size: Standard_D4
+    admin_username: f5admin
+    admin_password: ChangeMeNow123
+    ssh_password_enabled: True
+    network_interface_names: f5demo-internal-int
+    image:
+      offer: UbuntuServer
+      publisher: Canonical
+      sku: '16.04-LTS'
+      version: latest

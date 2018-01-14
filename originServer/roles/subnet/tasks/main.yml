@@ -1,0 +1,8 @@
+---
+- name: Create Internal Subnet
+  azure_rm_subnet:
+    name: internal
+    virtual_network_name: f5demo-vnet
+    resource_group: f5demo-rg
+    address_prefix_cidr: "10.0.1.0/24"
+
