@@ -7,8 +7,8 @@
     admin_username: f5admin
     ssh_password_enabled: False
     ssh_public_keys:
-      - path: /home/f5admin/.ssh/authorized_keys
-        key_data: "{{ lookup('env', 'PUB_KEY') }}"
+      - path: /root/.ssh/authorized_keys
+        key_data: {{ lookup('env', 'PUB_KEY') }}
     network_interface_names: f5demo-internal-int
     image:
       offer: UbuntuServer

@@ -17,5 +17,10 @@ cd ~
 git clone https://github.com/F5Networks/f5-ansible -b devel
 cp ~/f5-ansible/library/. /usr/lib/python2.7/site-packages/ansible/modules/network/f5/
 
+
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+export PUB_KEY=$(cat id_rsa.pub)
+
+
 #Add my git email for dev
 git config --global user.email "stjbrown@gmail.com"

@@ -1,0 +1,6 @@
+---
+
+all:
+  hosts:
+    docker_host:
+      ansible_host: 52.170.81.50
