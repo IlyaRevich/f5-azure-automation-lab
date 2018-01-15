@@ -1,0 +1,46 @@
+---
+    - name: Create F5 Azure Cluster - New Stack
+      azure_rm_deployment:
+        state: present
+        resource_group_name: "{{ resourceGroup }}"
+        location: "{{ location }}"
+        parameters:
+          adminUsername:
+            value: "{{ adminUsername }}"
+          adminPassword:
+            value: "{{ adminPassword }}"
+          dnsLabel:
+            value: "{{ dnsLabel }}"
+          instanceName:
+            value: "{{ instanceName }}"
+          instanceType:
+            value: "{{ instanceType }}"
+          imageName:
+            value: "{{ imageName }}"
+          bigIpVersion:
+            value: "{{ bigIpVersion }}"
+          licenseKey1:
+            value: "{{ licenseKey1 }}"
+          licenseKey2:
+            value: "{{ licenseKey2 }}"
+          numberOfExternalIps:
+            value: "{{ numberOfExternalIps }}"
+          vnetAddressPrefix:
+            value: "{{ vnetAddressPrefix }}"
+          enableNetworkFailover:
+            value: "{{ enableNetworkFailover }}"
+          internalLoadBalancerType:
+            value: "{{ internalLoadBalancerType }}"
+          internalLoadBalancerProbePort:
+            value: "{{ internalLoadBalancerProbePort }}"
+          ntpServer:
+            value: "{{ ntpServer }}"
+          timeZone:
+            value: "{{ timeZone }}"
+          restrictedSrcAddress:
+            value: "{{ restrictedSrcAddress }}"
+          tagValues:
+            value: "{{ tagValues }}"
+          allowUsageAnalytics:
+            value: "{{ allowUsageAnalytics }}"
+        template_link: 'https://raw.githubusercontent.com/F5Networks/f5-azure-arm-templates/master/supported/cluster/3nic/new_stack/BYOL/azuredeploy.json'

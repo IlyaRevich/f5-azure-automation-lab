@@ -1,0 +1,9 @@
+---
+- name: 
+  docker_container:
+    name: juice-shop
+    image: bkimminich/juice-shop
+    state: started
+    interactive: True
+    published_ports:
+      - 3000:3000

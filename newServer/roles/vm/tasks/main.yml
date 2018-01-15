@@ -1,15 +1,16 @@
 ---
 - name: Create a VM
   azure_rm_virtualmachine:
-    resource_group: f5demo-rg
-    name: f5demo-linux-vm
-    vm_size: Standard_D4
+    resource_group: f5-rg-student1
+    name: coresos-server
+    vm_size: Standard_D3
+    #vm_size: Standard_D4
     admin_username: core
     ssh_password_enabled: False
     ssh_public_keys:
       - path: /home/core/.ssh/authorized_keys
         key_data: "{{ lookup('env', 'PUB_KEY') }}"
-    network_interface_names: f5demo-internal-int
+    network_interface_names: coreos-int1
     image:
       offer: CoreOS
       publisher: CoreOS

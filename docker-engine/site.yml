@@ -1,5 +1,11 @@
 ---
-- hosts: all
+- hosts: coreos
+  gather_facts: False
 
   roles:
-    - install
+      #- jzmch.bootstrap-coreos
+      #- defunctzombie.coreos-bootstrap
+      #- { role: install, become: yes }
+    - f5-hello-world
+    - juice-shop
+    - hackazon
