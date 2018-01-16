@@ -10,6 +10,7 @@
 #AZURE_PW=
 
 #Set Username to be created
+export AZURE_STUDENT="$e(cho $AZURE_USERNAME | awk -F'@' '{print $1}')"
 SP_NAME="$(echo $AZURE_USERNAME | awk -F'@' '{print $1}')-App"
 SP_PASSWORD=$(uuidgen)
 
