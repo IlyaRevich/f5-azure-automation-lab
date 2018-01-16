@@ -9,3 +9,25 @@
         access: Allow
         priority: 101
         direction: Inbound
+
+- azure_rm_securitygroup:
+    resource_group: f5-rg-student1
+    name: f5student1-ext-nsg
+    rules:
+      - name: 'AllowHTTP'
+        protocol: Tcp
+        destination_port_range: 80
+        access: Allow
+        priority: 101
+        direction: Inbound
+
+- azure_rm_securitygroup:
+    resource_group: f5-rg-student1
+    name: f5student1-ext-nsg
+    rules:
+      - name: 'AllowHTTPS'
+        protocol: Tcp
+        destination_port_range: 443 
+        access: Allow
+        priority: 102
+        direction: Inbound
