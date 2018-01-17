@@ -1,8 +1,0 @@
----
-- name: 
-  docker_container:
-    name: hackazon
-    image: mutzel/all-in-one-hackazon
-    state: started
-    published_ports:
-      - 8181:80
