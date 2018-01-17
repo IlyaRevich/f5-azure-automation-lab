@@ -13,3 +13,5 @@ externalNsg: "f5-{{ lookup('env', 'AZURE_STUDENT') }}-ext-nsg"
 #CoreOS VARs
 coreAdminName: core
 sshKey: "{{ lookup('env', 'PUB_KEY') }}"
+coreosTag: "{{ lookup('env', 'AZURE_STUDENT') }}"
+

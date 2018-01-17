@@ -62,6 +62,8 @@
       publisher: CoreOS
       sku: 'Stable'
       version: latest
+    tags:
+      coreos: "{{ coreosTag }}"
 
 - name: Get facts for CoreOS Public IP
   azure_rm_publicipaddress_facts:
