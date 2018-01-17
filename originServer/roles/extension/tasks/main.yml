@@ -1,8 +1,0 @@
----
-- name: Create VM Extension
-  azure_rm_virtualmachine_extension:
-    name: DockerExtension
-    location: eastus
-    resource_group: f5demo-rg
-    virtual_machine_name: f5demo-linux-vm
-    publisher: Microsoft.Azure.Extensions.DockerExtension

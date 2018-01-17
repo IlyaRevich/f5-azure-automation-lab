@@ -69,4 +69,4 @@
     name: coreos-int101 
   register: coreosIp
 
-- debug: var=coreosIp.ansible_facts.azure_publicipaddresses[0].properties.ipAddress
+- debug: var=coreosIp.ansible_facts.azure_publicipaddresses

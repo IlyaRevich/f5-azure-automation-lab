@@ -1,0 +1,15 @@
+---
+#VARs for CoreOS Server Build
+
+#Interface VARs
+resourceGroup: "{{ lookup('env', 'AZURE_STUDENT') }}-rg" 
+vnet: "f5-{{ lookup('env', 'AZURE_STUDENT') }}-vnet"
+
+#NSG VARs
+internalNsg: "f5-{{ lookup('env', 'AZURE_STUDENT') }}-int-nsg"
+externalNsg: "f5-{{ lookup('env', 'AZURE_STUDENT') }}-ext-nsg"
+
+
+#CoreOS VARs
+coreAdminName: core
+sshKey: "{{ lookup('env', 'PUB_KEY') }}"

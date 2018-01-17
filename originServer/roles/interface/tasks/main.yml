@@ -1,8 +1,0 @@
----
-- name: Create Internal Interface
-  azure_rm_networkinterface:
-    name: f5demo-internal-int
-    resource_group: f5demo-rg
-    virtual_network_name: f5demo-vnet
-    subnet_name: internal
-    security_group_name: f5demo-nsg

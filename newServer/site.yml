@@ -1,9 +1,0 @@
----
-- hosts: localhost
-  connection: local
-  gather_facts: no
-
-  roles:
-    - nsg
-    - interface
-    - vm

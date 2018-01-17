@@ -1,0 +1,9 @@
+---
+- hosts: "coreos_{{ lookup('env', 'AZURE_STUDENT') }}" 
+  gather_facts: False
+
+  roles:
+    - jzmch.bootstrap-coreos
+    - f5-hello-world
+    - juice-shop
+    - hackazon

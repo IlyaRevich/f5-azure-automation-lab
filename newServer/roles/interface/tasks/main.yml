@@ -1,9 +1,0 @@
----
-- name: Create Internal Interface
-  azure_rm_networkinterface:
-    name: coreos-int1
-    resource_group: f5-rg-student1
-    virtual_network_name: f5student1-vnet
-    subnet_name: internal
-    security_group_name: f5student1-int-nsg
-    private_ip_address: 10.0.3.100
