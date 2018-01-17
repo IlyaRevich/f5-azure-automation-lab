@@ -41,5 +41,5 @@ numberOfExternaslIps: 2
 #ntpServer:
 #timeZone:
 #restrictedSrvcAddress:
-#tagValues:
+tagValues: {"bigip" : " "{{ lookup('env', 'AZURE_STUDENT') }}""}
 #allowUasgeAnalytics:

@@ -1,0 +1,14 @@
+---
+#- debug: msg="{{ inventory_hostname }}i {{ ansible_host }}"
+  
+  
+- name: Create F5 BIG-IP Pool
+  bigip_pool:
+    name: "{{ poolName }}"
+    lb_method: "{{ lb_method }}"
+    user: "{{ adminUsername }}"
+    password: "{{ adminPassword }}"
+    server: "{{ ansible_host }}"
+    validate_certs: False
+  delegate_to: localhost
+

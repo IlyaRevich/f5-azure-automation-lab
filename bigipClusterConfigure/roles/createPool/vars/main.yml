@@ -1,0 +1,10 @@
+---
+#VARs for F5 BIG-IP
+
+#F5 Intance
+adminUsername: "{{ lookup('env', 'AZURE_STUDENT') }}"
+adminPassword: "{{ lookup('env', 'AZURE_PW') }}"
+
+#Pool
+poolName: f5-hello-world-pool
+
