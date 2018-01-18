@@ -1,0 +1,12 @@
+---
+#VARs for Azure Network
+
+#Interface VARs
+resourceGroup: "{{ lookup('env', 'AZURE_STUDENT') }}-rg" 
+
+#NSG VARs
+externalNsg: "f5-{{ lookup('env', 'AZURE_STUDENT') }}-ext-nsg"
+
+#alb
+externalAlb: "f5-{{ lookup('env', 'AZURE_STUDENT') }}-ext-alb"
+externalPip0: "f5-{{ lookup('env', 'AZURE_STUDENT') }}-ext-pip0"

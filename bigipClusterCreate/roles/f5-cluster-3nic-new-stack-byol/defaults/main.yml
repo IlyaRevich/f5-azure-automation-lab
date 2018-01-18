@@ -6,7 +6,7 @@ instanceType: Standard_DS3_v2
 imageName: Good
 bigIpVersion: latest
 licensedBandwidth: 200m
-numberOfExternalIps: 1
+#numberOfExternalIps: 1
 vnetAddressPrefix: '10.0'
 enableNetworkFailover: 'Yes'
 internalLoadBalancerType: Per-protocol
