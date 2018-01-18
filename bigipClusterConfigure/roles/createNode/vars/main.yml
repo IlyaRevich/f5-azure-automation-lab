@@ -6,6 +6,6 @@ adminUsername: "{{ lookup('env', 'AZURE_STUDENT') }}"
 adminPassword: "{{ lookup('env', 'AZURE_PW') }}"
 
 #Pool
-poolName: f5-hello-world-pool
-monitorType: and_list
-monitors: http
+nodeName: "coreOS"
+nodeIp: "10.0.3.6"
+

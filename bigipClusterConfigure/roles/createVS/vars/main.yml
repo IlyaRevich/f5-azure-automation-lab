@@ -5,7 +5,11 @@
 adminUsername: "{{ lookup('env', 'AZURE_STUDENT') }}"
 adminPassword: "{{ lookup('env', 'AZURE_PW') }}"
 
-#Pool
+
+#Create F5 BIG-IP VS
+destination: "13.90.86.237" 
+vsName: f5-hello-world-vs
+vsPort: 80
+snat: Automap
 poolName: f5-hello-world-pool
-monitorType: and_list
-monitors: http
+allProfiles: http

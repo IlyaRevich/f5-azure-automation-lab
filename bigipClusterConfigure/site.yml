@@ -4,3 +4,6 @@
 
   roles:
     - createPool
+    - createNode
+    - addNodeToPool
+    - createVS

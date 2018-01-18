@@ -7,5 +7,6 @@ adminPassword: "{{ lookup('env', 'AZURE_PW') }}"
 
 #Pool
 poolName: f5-hello-world-pool
-monitorType: and_list
-monitors: http
+memberName: coreOS
+memberIP: "10.0.3.6"
+memberPort: "8080"

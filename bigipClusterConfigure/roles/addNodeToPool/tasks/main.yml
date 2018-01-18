@@ -2,17 +2,18 @@
 #- debug: msg="{{ inventory_hostname }}i {{ ansible_host }}"
   
   
-- name: Create F5 BIG-IP VS
-  bigip_virtual_server:
-    destination: "{{ destination }}"      
-    name: "{{ vsName }}"
-    port: "{{ vsPort }}"
-    snat: "{{ snat }}"
+- name: Add Node to  BIG-IP Pool
+  bigip_pool_member:
     pool: "{{ poolName }}"
-    all_profiles: "{{ allProfiles }}"
+    name: "{{ item.name }}"
+    host: "{{ item.host }}"
+    port: "{{ item.port }}"
     user: "{{ adminUsername }}"
     password: "{{ adminPassword }}"
     server: "{{ ansible_host }}"
     validate_certs: False
   delegate_to: localhost
-
+  with_items:
+    - name: "{{ memberName }}"
+      host: "{{ memberIP }}"
+      port: "{{ memberPort }}"

@@ -2,12 +2,10 @@
 #- debug: msg="{{ inventory_hostname }}i {{ ansible_host }}"
   
   
-- name: Create F5 BIG-IP Pool
-  bigip_pool:
-    name: "{{ poolName }}"
-    lb_method: "{{ lb_method }}"
-    monitor_type: "{{ monitorType }}"
-    monitors: "{{ monitors }}"
+- name: Create F5 BIG-IP Node
+  bigip_node:
+    name: "{{ nodeName }}"
+    host: "{{ nodeIp }}"
     user: "{{ adminUsername }}"
     password: "{{ adminPassword }}"
     server: "{{ ansible_host }}"
