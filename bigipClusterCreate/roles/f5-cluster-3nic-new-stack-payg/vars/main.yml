@@ -15,8 +15,8 @@ imageName:  Best
 #bigIpVersion: 13.0.0300 | 12.1.2200 | latest
 
 #BYOL
-#licenseKey1:  
-#licenseKey2: 
+#licenseKey1: "{{ lookup('env', 'licenseKey1') }}"  
+#licenseKey2: "{{ lookup('env', 'licenseKey2') }}"  
 
 
 #PAYG
@@ -29,7 +29,7 @@ licensedBandwidth: 25m
 #bigIqLicwensePool:
 
 #Network        
-numberOfExternaslIps: 2
+numberOfExternalIps: 4
 #vnetAddressPrefix:
 
 #Cluster        
@@ -41,5 +41,5 @@ numberOfExternaslIps: 2
 #ntpServer:
 #timeZone:
 #restrictedSrvcAddress:
-#tagValues:
+tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"bigip_{{ lookup('env', 'AZURE_STUDENT') }}"}
 #allowUasgeAnalytics:

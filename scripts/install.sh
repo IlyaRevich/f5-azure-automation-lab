@@ -19,7 +19,7 @@ cp ~/f5-ansible/library/. /usr/lib/python2.7/site-packages/ansible/modules/netwo
 
 
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
-export PUB_KEY=$(cat id_rsa.pub)
+export PUB_KEY=$(cat ~/.ssh/id_rsa.pub)
 
 
 #Add my git email for dev
