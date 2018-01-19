@@ -4,6 +4,5 @@
   gather_facts: False
   
   roles:
-          #- f5-cluster-3nic-new-stack-payg
-          - f5-cluster-3nic-new-stack-byol
-          #- updateALB
+    - f5-cluster-3nic-new-stack-payg
+    #- f5-cluster-3nic-new-stack-byol
