@@ -1,10 +1,10 @@
 ---
 - name: Create a load balancer
   azure_rm_loadbalancer:
-    name: f5-student1-ext-alb
+    name: f5HelloWorld-LB
     location: eastus
     resource_group: student1-rg
-    public_ip_address_name: f5-student1-ext-pip3
+    public_ip_address_name: f5-student1-ext-pip0
     load_distribution: Default
     protocol: Tcp
     frontend_port: 80
