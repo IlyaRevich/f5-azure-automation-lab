@@ -7,8 +7,11 @@ adminPassword: "{{ lookup('env', 'AZURE_PW') }}"
 
 
 #Create F5 BIG-IP VS
-destination: "13.90.86.237" 
-vsName: f5-hello-world-vs
+destination1: "10.0.2.10" 
+destination2: "10.0.2.11"
+vsName1: f5-hello-world-vs-1
+vsName2: f5-hello-world-vs-2
+
 vsPort: 80
 snat: Automap
 poolName: f5-hello-world-pool

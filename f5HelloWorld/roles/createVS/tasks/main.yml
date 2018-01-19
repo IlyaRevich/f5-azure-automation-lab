@@ -2,10 +2,10 @@
 #- debug: msg="{{ inventory_hostname }}i {{ ansible_host }}"
   
   
-- name: Create F5 BIG-IP VS
+- name: Create F5 BIG-IP VS1
   bigip_virtual_server:
-    destination: "{{ destination }}"      
-    name: "{{ vsName }}"
+    destination: "{{ destination1 }}"      
+    name: "{{ vsName1 }}"
     port: "{{ vsPort }}"
     snat: "{{ snat }}"
     pool: "{{ poolName }}"
@@ -16,3 +16,16 @@
     validate_certs: False
   delegate_to: localhost
 
+- name: Create F5 BIG-IP VS2
+  bigip_virtual_server:
+    destination: "{{ destination2 }}"      
+    name: "{{ vsName2 }}"
+    port: "{{ vsPort }}"
+    snat: "{{ snat }}"
+    pool: "{{ poolName }}"
+    all_profiles: "{{ allProfiles }}"
+    user: "{{ adminUsername }}"
+    password: "{{ adminPassword }}"
+    server: "{{ ansible_host }}"
+    validate_certs: False
+  delegate_to: localhost

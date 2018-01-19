@@ -1,5 +1,5 @@
 ---
-- hosts: "bigip_{{ lookup('env', 'AZURE_STUDENT') }}" 
+- hosts: "owner_bigip_{{ lookup('env', 'AZURE_STUDENT') }}" 
   gather_facts: False
 
   roles:
