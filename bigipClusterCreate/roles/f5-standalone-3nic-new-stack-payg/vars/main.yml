@@ -1,0 +1,45 @@
+---
+#VARs for F4 Azure ARM Template
+
+#Azure
+resourceGroup: "{{ lookup('env', 'AZURE_STUDENT') }}-rg" 
+dnsLabel: "f5-{{ lookup('env', 'AZURE_STUDENT') }}"
+location: eastus
+
+#F5 Intance
+adminUsername: "{{ lookup('env', 'AZURE_STUDENT') }}"
+adminPassword: "{{ lookup('env', 'AZURE_PW') }}"
+#instanceName:
+instanceType: Standard_DS4_v2
+imageName:  Best
+#bigIpVersion: 13.0.0300 | 12.1.2200 | latest
+
+#BYOL
+#licenseKey1: "{{ lookup('env', 'licenseKey1') }}"  
+#licenseKey2: "{{ lookup('env', 'licenseKey2') }}"  
+
+
+#PAYG
+licensedBandwidth: 25m 
+
+#BIG-IQ        
+#bigIqLicewnseHost: 
+#bigIqLicenseUsername:
+#bigIqLicensePassword:
+#bigIqLicwensePool:
+
+#Network        
+numberOfExternalIps: 4
+#vnetAddressPrefix:
+
+#Cluster        
+#enableNetworkFailover:
+#internalLoadBalancerType:
+#internalLoadBalanceProbePort:
+
+#System                
+#ntpServer:
+#timeZone:
+#restrictedSrvcAddress:
+tagValues: {"application":"APP","cost":"COST","environment":"ENV","group":"GROUP","owner":"bigip_{{ lookup('env', 'AZURE_STUDENT') }}"}
+#allowUasgeAnalytics:
