@@ -1,0 +1,19 @@
+---
+#- debug: msg="{{ inventory_hostname }}i {{ ansible_host }}"
+  
+  
+- name: Add Node to  BIG-IP Pool
+  bigip_pool_member:
+    pool: "{{ poolName }}"
+    name: "{{ item.name }}"
+    host: "{{ item.host }}"
+    port: "{{ item.port }}"
+    user: "{{ adminUsername }}"
+    password: "{{ adminPassword }}"
+    server: "{{ ansible_host }}"
+    validate_certs: False
+  delegate_to: localhost
+  with_items:
+    - name: "{{ memberName }}"
+      host: "{{ memberIP }}"
+      port: "{{ memberPort }}"

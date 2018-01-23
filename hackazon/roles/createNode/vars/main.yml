@@ -1,0 +1,11 @@
+---
+#VARs for F5 BIG-IP
+
+#F5 Intance
+adminUsername: "{{ lookup('env', 'AZURE_STUDENT') }}"
+adminPassword: "{{ lookup('env', 'AZURE_PW') }}"
+
+#Pool
+nodeName: "coreOS"
+nodeIp: "10.0.3.6"
+

@@ -5,5 +5,3 @@
   
   roles:
     - f5-standalone-3nic-new-stack-payg
-    #- f5-cluster-3nic-new-stack-payg
-    #- f5-cluster-3nic-new-stack-byol

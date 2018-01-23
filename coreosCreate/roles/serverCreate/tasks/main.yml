@@ -36,6 +36,54 @@
         priority: 102
         direction: Inbound
 
+- name: Add 8080 to External Security Group
+  azure_rm_securitygroup:
+    resource_group: "{{ resourceGroup }}"
+    name: "{{ externalNsg }}"
+    rules:
+      - name: 'Allow8080'
+        protocol: Tcp
+        destination_port_range: 8080
+        access: Allow
+        priority: 103
+        direction: Inbound
+
+- name: Add 8443 to External Security Group
+  azure_rm_securitygroup:
+    resource_group: "{{ resourceGroup }}"
+    name: "{{ externalNsg }}"
+    rules:
+      - name: 'Allow8443'
+        protocol: Tcp
+        destination_port_range: 8443
+        access: Allow
+        priority: 104
+        direction: Inbound
+
+- name: Add 8181 to External Security Group
+  azure_rm_securitygroup:
+    resource_group: "{{ resourceGroup }}"
+    name: "{{ externalNsg }}"
+    rules:
+      - name: 'Allow8181'
+        protocol: Tcp
+        destination_port_range: 8181
+        access: Allow
+        priority: 105
+        direction: Inbound
+      
+- name: Add 3000 External Security Group
+  azure_rm_securitygroup:
+    resource_group: "{{ resourceGroup }}"
+    name: "{{ externalNsg }}"
+    rules:
+      - name: 'Allow3000'
+        protocol: Tcp
+        destination_port_range: 3000
+        access: Allow
+        priority: 106
+        direction: Inbound
+
 - name: Create Internal Interface
   azure_rm_networkinterface:
     name: coreos-int1

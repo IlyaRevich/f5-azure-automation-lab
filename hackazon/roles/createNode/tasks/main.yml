@@ -1,0 +1,14 @@
+---
+#- debug: msg="{{ inventory_hostname }}i {{ ansible_host }}"
+  
+  
+- name: Create F5 BIG-IP Node
+  bigip_node:
+    name: "{{ nodeName }}"
+    host: "{{ nodeIp }}"
+    user: "{{ adminUsername }}"
+    password: "{{ adminPassword }}"
+    server: "{{ ansible_host }}"
+    validate_certs: False
+  delegate_to: localhost
+

@@ -1,0 +1,12 @@
+---
+#VARs for F5 BIG-IP
+
+#F5 Intance
+adminUsername: "{{ lookup('env', 'AZURE_STUDENT') }}"
+adminPassword: "{{ lookup('env', 'AZURE_PW') }}"
+
+#Pool
+poolName: juice-shop-pool
+memberName: coreOS
+memberIP: "10.0.3.6"
+memberPort: "3000"
